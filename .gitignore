@@ -1,0 +1,11 @@
+# Ignore
+node_modules
+lib
+.DS_Store
+*.env
+*.pem
+*.crt
+*.csr
+*.key
+*.a
+*.o
