@@ -1,13 +1,14 @@
 {
   "name": "ts-mutex",
   "version": "0.1.0",
-  "description": "",
+  "description": "A very basy mutex class written in/for TypeScript",
   "main": "lib/mutex.js",
   "types": "lib/mutex.d.ts",
   "scripts": {
     "clean": "rm -rf ./lib",
     "build": "tsc",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "docs": "typedoc"
   },
   "keywords": [
     "mutex",
@@ -22,6 +23,7 @@
     "@types/node": "^12.7.7",
     "chai": "^4.2.0",
     "ts-mocha": "^6.0.0",
+    "typedoc": "^0.15.0",
     "typescript": "^3.6.3"
   }
 }
