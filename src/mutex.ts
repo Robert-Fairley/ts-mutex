@@ -1,3 +1,6 @@
+if (window) {
+    window.exports = exports = {};
+}
 /**
  * The method/promise type to be added to the mutex queue.
  */
@@ -16,7 +19,7 @@ export type MutexRecord = [MutexTask, MutexFunction, MutexFunction];
 /**
  * Mutex class. Provides a queue and locking for concurrent method calls.
  */
-export class Mutex {
+class Mutex {
     private busy!: boolean;
     private readonly queue!: MutexRecord[];
 
@@ -95,4 +98,8 @@ export class Mutex {
     
 }
 
+if (window) {
+    (window as any).Mutex = Mutex;
+}
+export { Mutex };
 export default Mutex;

@@ -6,7 +6,9 @@
   "types": "lib/mutex.d.ts",
   "scripts": {
     "clean": "rm -rf ./lib",
-    "build": "tsc",
+    "build:node": "tsc",
+    "build:browser": "node scripts/browser-build",
+    "build": "npm run clean && npm run build:node && npm run build:browser",
     "postinstall": "npm run build",
     "docs": "typedoc"
   },
@@ -21,8 +23,10 @@
     "@types/chai": "^4.2.3",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.7",
+    "browserify": "^16.5.0",
     "chai": "^4.2.0",
     "ts-mocha": "^6.0.0",
+    "tsify": "^4.0.1",
     "typedoc": "^0.15.0",
     "typescript": "^3.6.3"
   }
